@@ -1,0 +1,638 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- ===== META TAGS ===== -->
+    <!-- Character encoding for proper text display -->
+    <meta charset="UTF-8">
+    <!-- Responsive viewport settings for mobile devices -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Page title shown in browser tab -->
+    <title>Ashwani's Portfolio</title>
+    
+    <!-- ===== EXTERNAL RESOURCES ===== -->
+    <!-- Font Awesome for icons throughout the site -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <!-- Custom stylesheet -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <!-- ========================================
+         BACKGROUND DECORATION ELEMENTS
+         These create visual interest and depth
+    ========================================= -->
+    
+    <!-- Animated floating shapes for visual appeal -->
+    <div class="floating-shapes">
+        <div class="shape shape-1"></div>
+        <div class="shape shape-2"></div>
+        <div class="shape shape-3"></div>
+        <div class="shape shape-4"></div>
+    </div>
+
+    <!-- ========================================
+         NAVIGATION BAR
+         Sticky navigation for easy site access
+    ========================================= -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <!-- Logo/Brand -->
+            <div class="logo">
+                <span class="logo-icon">AK</span>
+                <span class="logo-text">Ashwani Kumar</span>
+            </div>
+            
+            <!-- Navigation Menu -->
+            <ul class="nav-menu">
+                <li><a href="#home" class="nav-link">Home</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#projects" class="nav-link">Projects</a></li>
+                <li><a href="#skills" class="nav-link">Skills</a></li>
+                <li><a href="#education" class="nav-link">Education</a></li>
+                <li><a href="#contact" class="nav-link">Contact Me</a></li>
+            </ul>
+            
+            <!-- Mobile menu toggle button -->
+            <button class="menu-toggle" aria-label="Toggle navigation menu">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- ========================================
+         HERO SECTION
+         Main landing section with introduction
+    ========================================= -->
+    <section id="home" class="hero">
+        <!-- Animated particle background -->
+        <div class="particle-container"></div>
+        
+        <!-- Additional floating shapes for depth -->
+        <div class="floating-shape"></div>
+        <div class="floating-shape"></div>
+        <div class="floating-shape"></div>
+        
+        <!-- Background pattern overlay -->
+        <div class="header-bg-pattern"></div>
+        
+        <!-- Main hero content container -->
+        <div class="hero-container">
+            <!-- Left side: Text content -->
+            <div class="hero-content">
+                <!-- Main heading with name -->
+                <h1>
+                    <span class="title-line">Ashwani</span>
+                    <span class="title-line-highlight"> Kumar</span>
+                </h1>
+
+                <!-- Role/Title tagline -->
+                <div class="tagline">Full Stack Developer & AI Enthusiast</div>
+                
+                <!-- Brief description -->
+                <p class="description">
+                    Passionate computer science graduate with expertise in modern web technologies, 
+                    AI/ML integration, and creating innovative digital solutions that make a difference.
+                </p>
+                
+                <!-- Call-to-action buttons -->
+                <div class="cta-buttons">
+                    <a href="#projects" class="btn btn-primary">
+                        <span class="btn-text">View My Work</span>
+                        <span class="btn-icon">→</span>
+                    </a>
+                    <a href="#contact" class="btn btn-secondary">
+                        <span class="btn-text">Get In Touch</span>
+                        <span class="btn-icon">📧</span>
+                    </a>
+                </div>
+            </div>
+            
+            <!-- Right side: Profile image -->
+            <div class="hero-image">
+                <div class="profile-frame">
+                    <div class="profile-image">
+                        <!-- Profile photo - Replace with your image -->
+                        <img src="./assets/image01.jpg" alt="Ashwani Kumar - Full Stack Developer">
+                    </div>
+                </div>
+                
+                <!-- Decorative elements around photo -->
+                <div class="photo-decorations">
+                    <div class="decoration decoration-1"></div>
+                    <div class="decoration decoration-2"></div>
+                    <div class="decoration decoration-3"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========================================
+         ABOUT SECTION
+         Introduction and skills overview
+    ========================================= -->
+    <section id="about" class="about-section reveal">
+        <!-- Background decorative elements -->
+        <div class="section-bg geometric-pattern"></div>
+        <div class="particle-container"></div>
+        
+        <div class="container"> 
+            <!-- Section header with title and subtitle -->
+            <div class="section-header">
+                <span class="section-badge">About Me</span>
+                <h2 class="section-title">Passionate About Creating</h2>
+                <p class="section-subtitle">Transforming ideas into digital reality</p>
+            </div>
+            
+            <!-- Main content grid: Text content and skill cards -->
+            <div class="about-grid">
+                <!-- LEFT: Text content describing who I am and what I do -->
+                <div class="about-text">
+                    <div class="text-block">
+                        <h3>Who I Am</h3>
+                        <p>I'm a creative developer and designer with a passion for crafting exceptional digital experiences. With years of experience in web development and design, I specialize in creating user-centric solutions that combine aesthetic appeal with functional excellence.</p>
+                    </div>
+                    <div class="text-block">
+                        <h3>What I Do</h3>
+                        <p>From responsive websites to interactive applications, I bring ideas to life using modern technologies and design principles. My approach focuses on understanding user needs and translating them into engaging digital experiences.</p>
+                    </div>
+                </div>
+                
+                <!-- RIGHT: Skill cards grid showcasing key competencies -->
+                <div class="about-skills-grid">
+                    <!-- Card 1: UI/UX Design -->
+                    <div class="skill-card">
+                        <div class="skill-icon">🎨</div>
+                        <h4>UI/UX Design</h4>
+                        <p>Creating intuitive and beautiful user interfaces</p>
+                    </div>
+                    
+                    <!-- Card 2: Web Development -->
+                    <div class="skill-card">
+                        <div class="skill-icon">💻</div>
+                        <h4>Web Development</h4>
+                        <p>Building responsive and performant web applications</p>
+                    </div>
+                    
+                    <!-- Card 3: Mobile Design -->
+                    <div class="skill-card">
+                        <div class="skill-icon">📱</div>
+                        <h4>Mobile Design</h4>
+                        <p>Designing mobile-first experiences</p>
+                    </div>
+                    
+                    <!-- Card 4: Performance Optimization -->
+                    <div class="skill-card">
+                        <div class="skill-icon">⚡</div>
+                        <h4>Performance</h4>
+                        <p>Optimizing for speed and user experience</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========================================
+         PROJECTS SECTION
+         Portfolio of featured work
+    ========================================= -->
+    <section id="projects" class="projects reveal">
+        <!-- Background particles -->
+        <div class="particle-container"></div>
+        
+        <div class="projects-container">
+            <h2 class="section-title">Featured Projects</h2>
+            
+            <!-- Projects grid layout -->
+            <div class="projects-grid">
+                <!-- Project Card 1: Helmet Detection System -->
+                <div class="project-card">
+                    <div class="project-image">
+                        <i class="fas fa-motorcycle"></i>
+                    </div>
+                    <div class="project-content">
+                        <h3>Helmet-less Biker Detection</h3>
+                        <p>
+                            Advanced computer vision system using YOLO and R-CNN for real-time detection 
+                            of motorcycle riders without helmets, improving road safety compliance.
+                        </p>
+                        
+                        <!-- Technology tags -->
+                        <div class="project-tech">
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">YOLO</span>
+                            <span class="tech-tag">OpenCV</span>
+                            <span class="tech-tag">Deep Learning</span>
+                        </div>
+                        
+                        <!-- Project links -->
+                        <div class="project-links">
+                            <a href="#" class="project-link">
+                                <i class="fab fa-github"></i> Code
+                            </a>
+                            <a href="#" class="project-link">
+                                <i class="fas fa-external-link-alt"></i> Demo
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project Card 2: Travel Portal -->
+                <div class="project-card">
+                    <div class="project-image">
+                        <i class="fas fa-plane"></i>
+                    </div>
+                    <div class="project-content">
+                        <h3>Travel & Tour Booking Portal</h3>
+                        <p>
+                            Dynamic full-stack web application for travel booking with responsive design, 
+                            integrated Google Maps API, and intuitive user interface for seamless travel planning.
+                        </p>
+                        
+                        <div class="project-tech">
+                            <span class="tech-tag">HTML/CSS</span>
+                            <span class="tech-tag">JavaScript</span>
+                            <span class="tech-tag">Google Maps API</span>
+                            <span class="tech-tag">Responsive Design</span>
+                        </div>
+                        
+                        <div class="project-links">
+                            <a href="#" class="project-link">
+                                <i class="fab fa-github"></i> Code
+                            </a>
+                            <a href="#" class="project-link">
+                                <i class="fas fa-external-link-alt"></i> Live Site
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project Card 3: AI Platform -->
+                <div class="project-card">
+                    <div class="project-image">
+                        <i class="fas fa-brain"></i>
+                    </div>
+                    <div class="project-content">
+                        <h3>AI Data Annotation Platform</h3>
+                        <p>
+                            Contributed to AI model training through high-quality data annotation and evaluation, 
+                            working with diverse machine learning projects to improve model accuracy.
+                        </p>
+                        
+                        <div class="project-tech">
+                            <span class="tech-tag">Machine Learning</span>
+                            <span class="tech-tag">Data Analysis</span>
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">AI Training</span>
+                        </div>
+                        
+                        <div class="project-links">
+                            <a href="#" class="project-link">
+                                <i class="fas fa-info-circle"></i> Details
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========================================
+         SKILLS SECTION
+         Technical and soft skills showcase
+    ========================================= -->
+    <section class="skills" id="skills">
+        <!-- Floating particles animation container -->
+        <div class="floating-particles"></div>
+        
+        <div class="section-container">
+            <h2 class="section-title">Skills & Technologies</h2>
+            
+            <!-- Skills organized by category -->
+            <div class="skills-grid">
+                <!-- Frontend Skills Category -->
+                <div class="skill-category">
+                    <h3><i class="fas fa-code"></i> Frontend Development</h3>
+                    
+                    <div class="skill-item">
+                        <div class="skill-icon"><i class="fab fa-html5"></i></div>
+                        <span>HTML5</span>
+                    </div>
+                    
+                    <div class="skill-item">
+                        <div class="skill-icon"><i class="fab fa-css3-alt"></i></div>
+                        <span>CSS3</span>
+                    </div>
+                    
+                    <div class="skill-item">
+                        <div class="skill-icon"><i class="fab fa-js-square"></i></div>
+                        <span>JavaScript</span>
+                    </div>
+                    
+                    <div class="skill-item">
+                        <div class="skill-icon"><i class="fab fa-react"></i></div>
+                        <span>ReactJS</span>
+                    </div>
+                </div>
+
+                <!-- Backend Skills Category -->
+                <div class="skill-category">
+                    <h3><i class="fas fa-server"></i> Backend Development</h3>
+                    
+                    <div class="skill-item">
+                        <div class="skill-icon"><i class="fab fa-php"></i></div>
+                        <span>PHP</span>
+                    </div>
+                    
+                    <div class="skill-item">
+                        <div class="skill-icon"><i class="fas fa-database"></i></div>
+                        <span>MySQL</span>
+                    </div>
+                    
+                    <div class="skill-item">
+                        <div class="skill-icon"><i class="fab fa-java"></i></div>
+                        <span>Java</span>
+                    </div>
+                    
+                    <div class="skill-item">
+                        <div class="skill-icon"><i class="fab fa-python"></i></div>
+                        <span>Python</span>
+                    </div>
+                </div>
+
+                <!-- Tools & Technologies Category -->
+                <div class="skill-category">
+                    <h3><i class="fas fa-tools"></i> Tools & Technologies</h3>
+                    
+                    <div class="skill-item">
+                        <div class="skill-icon"><i class="fab fa-git-alt"></i></div>
+                        <span>Git & GitHub</span>
+                    </div>
+                    
+                    <div class="skill-item">
+                        <div class="skill-icon"><i class="fas fa-cloud"></i></div>
+                        <span>Cloud Computing</span>
+                    </div>
+                    
+                    <div class="skill-item">
+                        <div class="skill-icon"><i class="fas fa-chart-bar"></i></div>
+                        <span>Big Data</span>
+                    </div>
+                    
+                    <div class="skill-item">
+                        <div class="skill-icon"><i class="fas fa-file-excel"></i></div>
+                        <span>MS Office</span>
+                    </div>
+                </div>
+
+                <!-- Soft Skills Category -->
+                <div class="skill-category">
+                    <h3><i class="fas fa-lightbulb"></i> Soft Skills</h3>
+                    
+                    <div class="skill-item">
+                        <div class="skill-icon"><i class="fas fa-brain"></i></div>
+                        <span>Quick Learner</span>
+                    </div>
+                    
+                    <div class="skill-item">
+                        <div class="skill-icon"><i class="fas fa-users"></i></div>
+                        <span>Collaboration</span>
+                    </div>
+                    
+                    <div class="skill-item">
+                        <div class="skill-icon"><i class="fas fa-puzzle-piece"></i></div>
+                        <span>Problem Solving</span>
+                    </div>
+                    
+                    <div class="skill-item">
+                        <div class="skill-icon"><i class="fas fa-comments"></i></div>
+                        <span>Communication</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========================================
+         EDUCATION SECTION
+         Academic background and qualifications
+    ========================================= -->
+    <section id="education" class="education reveal">
+        <div class="particle-container"></div>
+        
+        <div class="education-container">
+            <h2 class="section-title">Education</h2>
+            
+            <!-- Timeline layout for educational history -->
+            <div class="education-timeline">
+                <!-- Bachelor's Degree -->
+                <div class="education-item">
+                    <div class="education-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <div class="education-content">
+                        <div class="education-date">Sep 2022 - July 2025</div>
+                        <h3 class="education-title">Bachelor of Technology</h3>
+                        <div class="education-institution">Computer Science and Engineering</div>
+                        <div class="education-institution">
+                            Accurate Institute of Management and Technology, <br><i class="fas fa-map-marker-alt" style="color: red;"></i>Greater Noida, UP
+                        </div>
+                        <p>
+                            Relevant Coursework: Programming Fundamentals, Data Structures and Algorithms, 
+                            Object-Oriented Programming, Cloud Computing, and Big Data Analytics.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Diploma -->
+                <div class="education-item">
+                    <div class="education-icon">
+                        <i class="fas fa-certificate"></i>
+                    </div>
+                    <div class="education-content">
+                        <div class="education-date">Aug 2019 - July 2022</div>
+                        <h3 class="education-title">Diploma in Computer Science</h3>
+                        <div class="education-institution">Computer Science and Engineering</div>
+                        <div class="education-institution">
+                            Quantum University, Roorkee, Uttarakhand
+                        </div>
+                        <p>
+                            Relevant Coursework: Introduction to Computing, Computer Networks, 
+                            Programming Languages Proficiency, and Database Management Systems.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========================================
+         CONTACT SECTION
+         Contact information and message form
+    ========================================= -->
+    <section id="contact" class="contact reveal">
+        <div class="particle-container"></div>
+        
+        <div class="contact-container">
+            <h2 class="section-title">Let's Connect</h2>
+            <p>
+                I am available on almost every social media. 
+                You can message me, I will reply within 24 hours. 
+                I can help you with ML, AI, React, Android, Cloud and Opensource Development.
+            </p>
+            
+            <div class="contact-content">
+                <!-- Left side: Contact information -->
+                <div class="contact-info">
+                    <!-- Email -->
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h3>Email</h3>
+                            <a href="mailto:sashwani9546@gmail.com">sashwani9546@gmail.com</a>
+                        </div>
+                    </div>
+
+                    <!-- Phone -->
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h3>Phone</h3>
+                            <a href="tel:+918210745653">(+91) 8210745653</a>
+                        </div>
+                    </div>
+
+                    <!-- LinkedIn -->
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fab fa-linkedin"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h3>LinkedIn</h3>
+                            <a href="https://linkedin.com/in/iashwanikumar" target="_blank">
+                                linkedin.com/in/iashwanikumar
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- GitHub -->
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fab fa-github"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h3>GitHub</h3>
+                            <a href="https://github.com/iashwanikumar" target="_blank">
+                                github.com/iashwanikumar
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right side: Contact form -->
+                <div class="contact-form">
+                    <h3>Send Message</h3>
+                    <form id="contactForm">
+                        <!-- Full name input -->
+                        <div class="form-group">
+                            <input 
+                                type="text" 
+                                id="fullName" 
+                                name="fullName" 
+                                placeholder="Full Name" 
+                                required
+                            >
+                        </div>
+                        
+                        <!-- Email input -->
+                        <div class="form-group">
+                            <input 
+                                type="email" 
+                                id="email" 
+                                name="email" 
+                                placeholder="Email Address" 
+                                required
+                            >
+                        </div>
+                        
+                        <!-- Subject input -->
+                        <div class="form-group">
+                            <input 
+                                type="text" 
+                                id="subject" 
+                                name="subject" 
+                                placeholder="Subject" 
+                                required
+                            >
+                        </div>
+                        
+                        <!-- Message textarea -->
+                        <div class="form-group">
+                            <textarea 
+                                id="message" 
+                                name="message" 
+                                placeholder="Message" 
+                                rows="5" 
+                                required
+                            ></textarea>
+                        </div>
+                        
+                        <!-- Submit button -->
+                        <button type="submit" class="btn btn-primary form-btn">
+                            <span>Send Message</span>
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========================================
+         FOOTER
+         Social links and copyright information
+    ========================================= -->
+    <footer class="footer">
+        <div class="footer-container">
+            <!-- Social media links -->
+            <div class="footer-social">
+                <a href="mailto:sashwani9546@gmail.com" class="social-link" title="Email">
+                    <i class="fas fa-envelope"></i>
+                </a>
+                <a href="https://linkedin.com/in/iashwanikumar" class="social-link" target="_blank" title="LinkedIn">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+                <a href="https://github.com/iashwanikumar" class="social-link" target="_blank" title="GitHub">
+                    <i class="fab fa-github"></i>
+                </a>
+                <a href="tel:+918210745653" class="social-link" title="Phone">
+                    <i class="fas fa-phone"></i>
+                </a>
+            </div>
+            
+            <!-- Copyright text -->
+            <div class="footer-text">
+                <p>&copy; 2025 Ashwani Kumar. All rights reserved. Built with passion and dedication.</p>
+            </div>
+        </div>
+        
+        <!-- Animated particles in footer -->
+        <div class="footer-particles"></div>
+    </footer>
+
+    <!-- ========================================
+         SCROLL TO TOP BUTTON
+         Quick navigation back to top of page
+    ========================================= -->
+    <button class="scroll-top" id="scrollTop" aria-label="Scroll to top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- ===== JAVASCRIPT ===== -->
+    <!-- Custom scripts for interactivity and animations -->
+    <script src="script.js"></script>
+</body>
+</html>
