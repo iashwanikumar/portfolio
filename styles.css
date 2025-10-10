@@ -418,7 +418,7 @@ h1, h2, h3, h4, h5, h6 {
 /* Hero content grid layout - two columns */
 .hero-container {
     padding: 3% 5%;
-    max-width: 100%;
+    max-width: 1200px;
     margin: 0 auto;
     display: grid;
     grid-template-columns: 1fr 1fr;
