@@ -22,10 +22,10 @@
         // Particle system configuration
         particles: {
             maxCount: 26,              // Maximum number of particles
-            sizeMin: 2,                // Minimum particle size in pixels
+            sizeMin: 3,                // Minimum particle size in pixels
             sizeMax: 4,                // Maximum particle size in pixels
             speedRange: 1,             // Speed range for particle movement
-            opacityMin: 0.2,           // Minimum opacity
+            opacityMin: 0.3,           // Minimum opacity
             opacityMax: 0.8,           // Maximum opacity
             decayMin: 0.002,           // Minimum life decay rate
             decayMax: 0.007            // Maximum life decay rate
@@ -560,7 +560,7 @@
                 particle.className = 'particle';
                 
                 // Random size and position
-                const size = Math.random() * 3 + 3;
+                const size = Math.random() * 5 + 3;
                 particle.style.width = size + 'px';
                 particle.style.height = size + 'px';
                 particle.style.left = Math.random() * 100 + '%';
