@@ -34,7 +34,7 @@
         // Animation timing configuration
         animations: {
             scrollThreshold: 50,       // Pixels scrolled to trigger effects
-            scrollTopDuration: 900,    // Duration of scroll-to-top animation
+            scrollTopDuration: 450,    // Duration of scroll-to-top animation
             skillDelay: 100,           // Delay between skill animations (ms)
             projectDelay: 200,         // Delay between project animations (ms)
             educationDelay: 300,       // Delay between education items (ms)
@@ -153,17 +153,29 @@
          * Control navbar visibility based on scroll position
          * Shows navbar only at top of page
          */
-        setupNavbarScroll() {
-            const { navbar } = this.elements;
-            if (!navbar) return;
 
-            window.addEventListener('scroll', () => {
-                const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+            setupNavbarScroll() {
+                const { navbar } = this.elements;
+                if (!navbar) return;
+            
+                let lastScrollTop = 0; // To track previous scroll position
+                const threshold = 20; // Show when scrolled up by 20px
+            
+                window.addEventListener('scroll', () => {
+                    const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
                 
-                // Hide navbar when scrolled down past threshold
-                navbar.classList.toggle('hidden', scrollTop > CONFIG.animations.scrollThreshold);
-            }, { passive: true }); // Passive for better scroll performance
-        },
+                    // Scrolling down → hide navbar
+                    if (scrollTop > lastScrollTop && scrollTop > CONFIG.animations.scrollThreshold) {
+                        navbar.classList.add('hidden');
+                    } 
+                    // Scrolling up by at least 20px → show navbar
+                    else if (lastScrollTop - scrollTop > threshold) {
+                        navbar.classList.remove('hidden');
+                    }
+                
+                    lastScrollTop = scrollTop <= 0 ? 0 : scrollTop; // Prevent negative values
+                }, { passive: true });
+            },
 
         /**
          * Enable smooth scrolling for anchor links
