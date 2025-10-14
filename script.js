@@ -221,31 +221,74 @@
          * Create and manage scroll-to-top button
          * Appears after scrolling down, smoothly returns to top
          */
+
+//Checkpoint1
+
+
+
         setupScrollToTop() {
-            const scrollTopBtn = document.getElementById('scrollTop');
-            if (!scrollTopBtn) return;
+    const scrollTopBtn = document.getElementById('scrollTop');
+    if (!scrollTopBtn) return;
 
-            // Show/hide button based on scroll position
-            window.addEventListener('scroll', () => {
-                const shouldShow = window.pageYOffset > 50;
-                scrollTopBtn.classList.toggle('visible', shouldShow);
-            }, { passive: true });
+    // Detect if device is mobile
+    const isMobile = /Mobi|Android/i.test(navigator.userAgent);
 
-            // Smooth scroll to top with custom animation
-            scrollTopBtn.addEventListener('click', () => {
-                const duration = CONFIG.animations.scrollTopDuration;
-                const scrollStep = -window.scrollY / (duration / 15);
-                
-                // Custom scroll animation using intervals
-                const scrollInterval = setInterval(() => {
-                    if (window.scrollY !== 0) {
-                        window.scrollBy(0, scrollStep);
-                    } else {
-                        clearInterval(scrollInterval);
-                    }
-                }, 15);
-            });
-        },
+    // Show/hide button based on scroll position
+    window.addEventListener('scroll', () => {
+        // Mobile users usually need a higher threshold
+        const showThreshold = isMobile ? 150 : 80;
+        const shouldShow = window.pageYOffset > showThreshold;
+        scrollTopBtn.classList.toggle('visible', shouldShow);
+    }, { passive: true });
+
+    // Smooth scroll to top (optimized for both desktop & mobile)
+    scrollTopBtn.addEventListener('click', () => {
+        const start = window.scrollY;
+        // Mobile scroll a bit slower for smoother feel
+        const duration = isMobile 
+            ? CONFIG.animations.scrollTopDuration * 1.2 || 700 
+            : CONFIG.animations.scrollTopDuration || 600;
+
+        const startTime = performance.now();
+
+        if (isMobile) {
+            // Disable scroll during animation on mobile for smoothness
+            document.body.style.overflow = 'hidden';
+        }
+
+        function animateScroll(currentTime) {
+            const elapsed = currentTime - startTime;
+            const progress = Math.min(elapsed / duration, 1);
+
+            // Smooth ease-out effect
+            const easeOut = 1 - Math.pow(1 - progress, 3);
+            const scrollY = start * (1 - easeOut);
+
+            window.scrollTo(0, scrollY);
+
+            if (progress < 1) {
+                requestAnimationFrame(animateScroll);
+            } else if (isMobile) {
+                document.body.style.overflow = ''; // Re-enable scroll after done
+            }
+        }
+
+        requestAnimationFrame(animateScroll);
+    });
+
+    // Optional: touch feedback for mobile
+    if (isMobile) {
+        scrollTopBtn.addEventListener('touchstart', () => {
+            scrollTopBtn.classList.add('active');
+        });
+        scrollTopBtn.addEventListener('touchend', () => {
+            scrollTopBtn.classList.remove('active');
+        });
+    }
+},
+
+
+        //Checkpoint2
 
         /**
          * Setup Intersection Observer for reveal animations
