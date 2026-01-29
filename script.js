@@ -222,11 +222,7 @@
          * Appears after scrolling down, smoothly returns to top
          */
 
-//Checkpoint1
-
-
-
-        setupScrollToTop() {
+    setupScrollToTop() {
     const scrollTopBtn = document.getElementById('scrollTop');
     if (!scrollTopBtn) return;
 
@@ -288,7 +284,7 @@
 },
 
 
-        //Checkpoint2
+
 
         /**
          * Setup Intersection Observer for reveal animations
